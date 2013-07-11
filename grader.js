@@ -73,7 +73,7 @@ var loadChecks = function(checksfile) {
 }
 
 var checkHtmlFile = function(htmlfile, checksfile) {
-    console.log('checking html file %s', htmlfile);
+    //console.log('checking html file %s', htmlfile);
     $ = cheerioHtmlFile(htmlfile);
     var checks = loadChecks(checksfile).sort();
     var out = {}
@@ -99,7 +99,7 @@ if(require.main == module) {
     var checkJson;
     if (program.url) {
 	//console.log('--url = %s', program.url);
-	sleep.sleep(5);
+	sleep.sleep(10);
 	checkJson = checkHtmlFile(program.file, program.checks);
     }
     else {
